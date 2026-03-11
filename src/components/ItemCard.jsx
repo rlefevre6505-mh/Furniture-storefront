@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router";
 
-export default function Item({ item, i }) {
+export default function ItemCard({ item, i }) {
   const navigate = useNavigate();
 
   return (

@@ -1,6 +1,21 @@
+export const heroImages = [
+  {
+    id: 1,
+    url: "/src/assets/images/main/image1.webp",
+  },
+  { id: 2, url: "/src/assets/images/main/image2.webp" },
+  {
+    id: 3,
+    url: "/src/assets/images/main/image3.webp",
+  },
+];
+
+export function getProductById(id) {
+  return items.find((p) => p.id === Number(id));
+}
+
 export const items = [
   // CHAIRS
-
   {
     id: 1,
     category: "seating",
@@ -255,7 +270,3 @@ export const items = [
   //   stock_level: 0,
   // },
 ];
-
-export function getProductById(id) {
-  return items.find((p) => p.id === Number(id));
-}
