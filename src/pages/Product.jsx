@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router";
 import { useEffect } from "react";
 // import { useState } from "react";
 import { getProductById } from "../../data/data";
+import "./Product.css";
 
 export default function Product() {
   const { id } = useParams();
