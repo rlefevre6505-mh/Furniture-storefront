@@ -3,20 +3,22 @@ import { useEffect } from "react";
 // import { useState } from "react";
 import { getProductById } from "../../data/data";
 import "./Product.css";
+import { useCart } from "../context/CartContext";
 
 export default function Product() {
   const { id } = useParams();
-  const navigate = useNavigate();
   const product = getProductById(id);
+  const navigate = useNavigate();
   //   const [productState, setPorductState] = useState();
-
   useEffect(() => {
     if (!product) {
       navigate("/");
     }
   }, [product, navigate]);
 
-  console.log(product);
+  const { addToCart, cartItems } = useCart();
+  const productInCart = cartItems.find((item) => item.id === item.id);
+  const productQuantity = productInCart ? `(${productInCart.quantity})` : ``;
 
   return (
     <div className="product-view-container">
@@ -25,10 +27,16 @@ export default function Product() {
         src={product.image}
         alt={product.description}
       />
-      <div>
+      <div className="product_text">
         <h2>{product.title}</h2>
         <p>{product.description}</p>
-        <p className="product-price">${product.price}</p>
+        <div className="price_cart">
+          <p className="product_price">£{product.price}</p>
+
+          <button className="cart_button" onClick={() => addToCart(product.id)}>
+            Add to Cart {`${productQuantity}`}
+          </button>
+        </div>
       </div>
     </div>
   );

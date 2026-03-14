@@ -1,7 +1,14 @@
 import { Link, useNavigate } from "react-router";
+import { useCart } from "../context/CartContext";
+import { getProductById } from "../../data/data";
 
 export default function ItemCard({ item, i }) {
   const navigate = useNavigate();
+  const product = getProductById(item.id);
+
+  const { addToCart, cartItems } = useCart();
+  const productInCart = cartItems.find((item) => item.id === product.id);
+  const productQuantity = productInCart ? `(${productInCart.quantity})` : ``;
 
   return (
     <div key={`div${i}`} className="product-div">
@@ -17,15 +24,24 @@ export default function ItemCard({ item, i }) {
           >
             {item.title}
           </h3>
-          <p>{item.description}</p>
+          <p className="item_description">{item.description}</p>
         </div>
         <div>
           {item.stock_level === 0 ? (
             <p className="out-of-stock">Out of stock</p>
           ) : (
-            <p className="stock-level">{`${item.stock_level} available`}</p>
+            <p></p>
+            // <p className="stock-level">{`${item.stock_level} available`}</p>
           )}
-          <p className="product-price">£{item.price}</p>
+          <div className="price_cart_div">
+            <p className="product-price">£{item.price}</p>
+            <button
+              className="cart_button"
+              onClick={() => addToCart(product.id)}
+            >
+              Add to Cart {`${productQuantity}`}
+            </button>
+          </div>
         </div>
       </div>
     </div>

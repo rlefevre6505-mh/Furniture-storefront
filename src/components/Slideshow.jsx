@@ -1,28 +1,41 @@
 import { heroImages } from "../../data/data.js";
 import HeroImage from "./HeroImage.jsx";
+import "./Slideshow.css";
 import { useState, useEffect } from "react";
 
 export default function Slideshow() {
-  // const [imageIndex, setImageIndex] = useState(0);
+  const [imageIndex, setImageIndex] = useState(0);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setImageIndex((prevIndex) =>
-  //       prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1,
-  //     );
-  //   }, 3000);
-  // }, []);
+  useEffect(() => {
+    setInterval(() => {
+      setImageIndex((prevIndex) =>
+        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1,
+      );
+    }, 6000);
+  }, []);
 
   return (
     <div className="slideshow">
-      {heroImages.map((hero, i) => {
-        return (
-          <div key={`hero-div${i}`} className="slide">
-            <div className={`block${i}`}></div>
-            <HeroImage src={hero.url} alt="An elegant living space" />
-          </div>
-        );
-      })}
+      {/* {heroImages.map((hero, index) => {
+        return ( */}
+      <div key={`hero-div${imageIndex}`} className="slide">
+        <HeroImage
+          src={heroImages[imageIndex].url}
+          alt="An elegant living space"
+          className="heroImage"
+        >
+          <div className={`div${imageIndex}`}></div>
+          {imageIndex === 0 && <p className={`p${imageIndex}`}>Home comfort</p>}
+          {imageIndex === 1 && (
+            <p className={`p${imageIndex}`}>Exquisite elegance</p>
+          )}
+          {imageIndex === 2 && (
+            <p className={`p${imageIndex}`}>Contemporary style</p>
+          )}
+        </HeroImage>
+      </div>
+      {/* );
+      })} */}
     </div>
   );
 }

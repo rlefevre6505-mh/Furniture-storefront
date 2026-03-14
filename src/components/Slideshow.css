@@ -1,0 +1,97 @@
+.slideshow {
+  height: 70vh;
+  width: auto;
+  margin: auto;
+  margin-top: 10vh;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: auto;
+  scroll-snap-align: start;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .heroImage {
+    /* position: relative; */
+    height: 70vh;
+    border-radius: 4px;
+    align-self: center;
+    box-shadow: -2px -2px 1px rgba(106, 106, 106, 0.1);
+  }
+
+  animation: fadeIn 1.6s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.div0 {
+  z-index: -1;
+  position: absolute;
+  top: -26px;
+  left: 14%;
+  height: 260px;
+  width: 360px;
+  background-color: rgb(33, 189, 166);
+}
+
+.div1 {
+  z-index: -1;
+  position: absolute;
+  top: -26px;
+  left: 12%;
+  height: 260px;
+  width: 360px;
+  background-color: rgb(189, 101, 0);
+}
+
+.div2 {
+  z-index: -1;
+  position: absolute;
+  top: -26px;
+  left: 18%;
+  height: 260px;
+  width: 360px;
+  background-color: rgb(242, 213, 81);
+}
+
+.p0 {
+  font-size: 1.6rem;
+  color: white;
+  padding: 1.2rem 4rem 1.2rem 4rem;
+  position: absolute;
+  bottom: 0;
+  right: 12%;
+  background-color: rgb(33, 189, 166);
+}
+
+.p1 {
+  font-size: 1.6rem;
+  color: white;
+  padding: 1.2rem 4rem 1.2rem 4rem;
+  position: absolute;
+  bottom: 0;
+  right: 12%;
+  background-color: rgb(189, 101, 0);
+}
+
+.p2 {
+  font-size: 1.6rem;
+  color: white;
+  padding: 1.2rem 4rem 1.2rem 4rem;
+  position: absolute;
+  bottom: 0;
+  right: 12%;
+  z-index: 1;
+  background-color: rgb(242, 213, 81);
+}
