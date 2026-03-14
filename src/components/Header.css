@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--brand-color1);
+  color: white;
+  height: 8vh;
+}
+
+.branding-div {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+
+  background-image: linear-gradient(
+    to top,
+    rgb(204, 222, 226),
+    rgb(70, 152, 37)
+  );
+}
+
+h1 {
+  color: white;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+}
