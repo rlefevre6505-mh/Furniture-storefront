@@ -1,4 +1,4 @@
-import { items } from "/home/richardefevre/personal/storefront-furniture/data/data.js";
+import { items } from "../../data/data.js";
 import ItemCard from "../components/ItemCard.jsx";
 // import { Link } from "react-router";
 import "./Shop.css";
