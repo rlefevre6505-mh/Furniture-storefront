@@ -5,18 +5,24 @@ import { useState, useEffect } from "react";
 
 export default function Slideshow() {
   const [imageIndex, setImageIndex] = useState(0);
+  const [isFading, setIsFading] = useState(false);
 
   useEffect(() => {
-    setInterval(() => {
-      setImageIndex((prevIndex) =>
-        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1,
-      );
+    const interval = setInterval(() => {
+      setIsFading(true);
+      setTimeout(() => {
+        setImageIndex((prevIndex) =>
+          prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1,
+        );
+        setIsFading(false);
+      }, 600);
     }, 6000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="slideshow">
-      <div key={`hero-div${imageIndex}`} className="slide">
+      <div className={`slide ${isFading ? "fade-out" : "fade-in"}`}>
         <HeroImage
           src={heroImages[imageIndex].url}
           alt="An elegant living space"
@@ -32,8 +38,6 @@ export default function Slideshow() {
           )}
         </HeroImage>
       </div>
-      {/* );
-      })} */}
     </div>
   );
 }
