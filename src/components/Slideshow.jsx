@@ -16,8 +16,6 @@ export default function Slideshow() {
 
   return (
     <div className="slideshow">
-      {/* {heroImages.map((hero, index) => {
-        return ( */}
       <div key={`hero-div${imageIndex}`} className="slide">
         <HeroImage
           src={heroImages[imageIndex].url}
