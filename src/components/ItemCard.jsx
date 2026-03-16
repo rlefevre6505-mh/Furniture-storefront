@@ -28,20 +28,23 @@ export default function ItemCard({ item, i }) {
         </div>
         <div>
           {item.stock_level === 0 ? (
-            <p className="out-of-stock">Out of stock</p>
+            <>
+              <p className="out-of-stock">Out of stock</p>
+              <div className="price_cart_div">
+                <p className="product-price">£{item.price}</p>
+              </div>
+            </>
           ) : (
-            <p></p>
-            // <p className="stock-level">{`${item.stock_level} available`}</p>
+            <div className="price_cart_div">
+              <p className="product-price">£{item.price}</p>
+              <button
+                className="cart_button"
+                onClick={() => addToCart(product.id)}
+              >
+                Add to Cart {`${productQuantity}`}
+              </button>
+            </div>
           )}
-          <div className="price_cart_div">
-            <p className="product-price">£{item.price}</p>
-            <button
-              className="cart_button"
-              onClick={() => addToCart(product.id)}
-            >
-              Add to Cart {`${productQuantity}`}
-            </button>
-          </div>
         </div>
       </div>
     </div>
