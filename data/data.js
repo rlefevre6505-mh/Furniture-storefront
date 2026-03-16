@@ -1,12 +1,12 @@
 export const heroImages = [
   {
     id: 1,
-    url: "/public/images/main/image1.webp",
+    url: "/images/main/image1.webp",
   },
-  { id: 2, url: "/public/images/main/image2.webp" },
+  { id: 2, url: "/images/main/image2.webp" },
   {
     id: 3,
-    url: "/public/images/main/image3.webp",
+    url: "/images/main/image3.webp",
   },
 ];
 
@@ -23,7 +23,7 @@ export const items = [
     description:
       "A contemporaray fabric covered dining chair in a tasteful mustard yellow",
     price: "49.99",
-    image: "/public/images/chairs/aria-swivel-dining-chairs-yellow-weave.webp",
+    image: "/images/chairs/aria-swivel-dining-chairs-yellow-weave.webp",
     dimensions: "",
     materials: "fabric",
     colours: [],
@@ -37,7 +37,7 @@ export const items = [
     description:
       "A comfortable and stylish chair with a soft berry chenille fabric, perfect for relaxing in your living room.",
     price: "199.99",
-    image: "/public/images/chairs/aura-snuggle-chair-berry-chenille.webp",
+    image: "/images/chairs/aura-snuggle-chair-berry-chenille.webp",
     dimensions: "",
     materials: "",
     finish: "",
