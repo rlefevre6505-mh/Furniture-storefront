@@ -1,5 +1,8 @@
+// import { useEffect, useState } from "react";
+import { Elements } from "@stripe/react-stripe-js";
 import { useCart } from "../context/CartContext";
 import "./Checkout.css";
+import CheckoutForm from "../components/CheckoutForm";
 
 export default function Checkout() {
   const {
@@ -7,16 +10,10 @@ export default function Checkout() {
     updateQuantity,
     removeFromCart,
     getCartTotal,
-    clearCart,
+    // clearCart,
   } = useCart();
   const cartItems = getCartItemsWithProducts();
-
   const total = getCartTotal();
-
-  function placeOrder() {
-    alert("order placed");
-    clearCart();
-  }
 
   return (
     <div className="chackout_page">
@@ -65,7 +62,6 @@ export default function Checkout() {
             <h5>Order Summary</h5>
             <p>Total: £{total.toFixed(2)}</p>
           </div>
-          <button onClick={placeOrder}>Place Order</button>
         </div>
       </div>
     </div>

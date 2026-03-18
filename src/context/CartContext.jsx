@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useState, useContext, useEffect } from "react";
 import { getProductById } from "../../data/data";
 
@@ -86,5 +87,3 @@ export function useCart() {
   const context = useContext(CartContext);
   return context;
 }
-
-// 2hr 57min

@@ -9,35 +9,6 @@ import Checkout from "./pages/Checkout";
 import Header from "./components/Header";
 import CartProvider from "./context/CartContext";
 
-// export function Login() {
-//   const [name, setName] = useState();
-
-//   function handleSubmit(e) {
-//     e.preventDefault();
-//     if (!name.trim()) return;
-//     alert("login");
-//   }
-
-//   return (
-//     <div>
-//       <h1>Login</h1>
-//       <form>
-//         <label>
-//           Name
-//           <input
-//             type="text"
-//             placeholder="type your name"
-//             value={name}
-//             onChange={(e) => {
-//               setName(e.target.value);
-//             }}
-//           ></input>
-//         </label>
-//       </form>
-//     </div>
-//   );
-// }
-
 export default function App() {
   return (
     <CartProvider>
@@ -52,6 +23,7 @@ export default function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          |
         </>
       </BrowserRouter>
     </CartProvider>

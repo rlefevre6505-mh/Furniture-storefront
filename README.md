@@ -13,6 +13,19 @@ The React Compiler is enabled on this template. See [this documentation](https:/
 
 Note: This will impact Vite dev & build performances.
 
+## Stripe sandbox setup
+
+This project includes a minimal Stripe sandbox flow for the checkout page.
+
+Create a `.env` file in the project root with the following content:
+
+```
+VITE_STRIPE_PUBLISHABLE_KEY=pk_test_...
+STRIPE_SECRET_KEY=sk_test_...
+```
+
+The secret key is only used by the development server (Vite) to create a payment intent. **Do not commit** this file to version control.
+
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
