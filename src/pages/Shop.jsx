@@ -4,11 +4,8 @@ import ShopFilters from "../components/ShopFilters.jsx";
 import Cart from "../components/Cart.jsx";
 // import { Link } from "react-router";
 import React from "react";
-import { useState, useEffect, useRef, Suspense, lazy } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Shop.css";
-
-const LazyCard = React.lazy(() => import("../components/ItemCard.jsx"));
-
 export default function ShopPage() {
   const [checkboxes, setCheckboxes] = useState([
     "sofas",
@@ -120,11 +117,7 @@ export default function ShopPage() {
                 item.price <= values[1] &&
                 checkboxes.includes(item.category)
               ) {
-                return (
-                  <Suspense fallback={<div>Loading...</div>}>
-                    <ItemCard key={`item${i}`} item={item} i={i} />
-                  </Suspense>
-                );
+                return <ItemCard key={`item${i}`} item={item} i={i} />;
               }
             })
           )}
