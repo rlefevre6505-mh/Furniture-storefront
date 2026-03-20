@@ -23,7 +23,6 @@ export default function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          |
         </>
       </BrowserRouter>
     </CartProvider>

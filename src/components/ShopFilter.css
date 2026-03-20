@@ -1,3 +1,63 @@
+.shop_container {
+  position: relative;
+}
+
+.filter_panel_hidden {
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  overflow: hidden;
+}
+
+.filter_panel_show {
+  z-index: 2;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  min-height: 70vh;
+  min-width: 22vw;
+  background-color: white;
+  padding: 20px 0px 20px 40px;
+  border: 2px solid var(--brand-color1);
+  border-radius: 4px;
+  overflow-y: auto;
+}
+
+.checkbox_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  input {
+    margin-right: 0.8rem;
+  }
+  .filter_close_icon {
+    position: absolute;
+    max-width: 2rem;
+    top: -12px;
+    right: 8px;
+    padding: 0 0.2rem 0 0.2rem;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
+}
+
+.filter_close_icon:hover {
+  cursor: pointer;
+}
+.filter_close_icon:active {
+  background-color: var(--brand-color1);
+}
+
 .slider {
-  width: 800px;
+  margin: auto;
+}
+
+.select {
+  background-color: white;
+  color: black;
+}
+
+.bold {
+  font-weight: 600;
+  color: var(--brand-color1);
 }
