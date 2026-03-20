@@ -24,7 +24,7 @@ export default function ItemCard({ item, i }) {
           >
             {item.title}
           </h3>
-          <p className="item_description">{item.description}</p>
+          {/* <p className="item_description">{item.description}</p> */}
         </div>
         <div>
           {item.stock_level === 0 ? (

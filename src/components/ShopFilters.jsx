@@ -1,32 +1,98 @@
 import { Range, getTrackBackground } from "react-range";
-import { useState } from "react";
+// import { useState } from "react";
 import "./ShopFilter.css";
 
 const STEP = 1;
 const MIN = 0;
-const MAX = 1000;
+const MAX = 1600;
 
-export default function ShopFilters() {
-  const [values, setValues] = useState([1, 1000]);
+export default function ShopFilters({
+  filtersHidden,
+  setFiltersHidden,
+  checkboxes,
+  setCheckboxes,
+  values,
+  setValues,
+  sort,
+  setSort,
+  ref,
+}) {
+  function updateCheckboxes(e) {
+    const value = e.target.value;
+    setCheckboxes((prev) =>
+      prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value],
+    );
+    console.log(checkboxes);
+  }
 
   return (
-    <div>
-      <div>
-        <input type="checkbox" id="sofas" name="sofas" value="sofas" />
-        <label htmlFor="sofas">Sofas</label>
-
-        <input type="checkbox" id="chairs" name="chairs" value="chairs" />
-        <label htmlFor="chairs">Chairs</label>
-
-        <input type="checkbox" id="tables" name="tables" value="tables" />
-        <label htmlFor="tables">Tables</label>
-
-        <input type="checkbox" id="lighting" name="lighting" value="lighting" />
-        <label htmlFor="lighting">Lighting</label>
+    <div
+      ref={ref}
+      className={filtersHidden ? "filter_panel_hidden" : "filter_panel_show"}
+    >
+      <div className="checkbox_container">
+        <svg
+          className="filter_close_icon"
+          xmlns="http://www.w3.org/2000/svg"
+          height="40px"
+          viewBox="0 -960 960 960"
+          width="40px"
+          fill="#1f1f1f"
+          onClick={() => {
+            setFiltersHidden(true);
+          }}
+        >
+          <path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z" />
+        </svg>
+        <p className="bold">Categories:</p>
+        <div>
+          <input
+            type="checkbox"
+            id="sofas"
+            name="sofas"
+            value="sofas"
+            onClick={updateCheckboxes}
+            defaultChecked={true}
+          />
+          <label htmlFor="seating">Sofas</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="seating"
+            name="seating"
+            value="seating"
+            onClick={updateCheckboxes}
+            defaultChecked={true}
+          />
+          <label htmlFor="chairs">Seating</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="tables"
+            name="tables"
+            value="tables"
+            onClick={updateCheckboxes}
+            defaultChecked={true}
+          />
+          <label htmlFor="tables">Tables</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="lighting"
+            name="lighting"
+            value="lighting"
+            onClick={updateCheckboxes}
+            defaultChecked={true}
+          />
+          <label htmlFor="lighting">Lighting</label>
+        </div>
       </div>
 
       <div>
-        <p>Set price range:</p>
+        <p className="bold">Set price range:</p>
 
         <div>
           <Range
@@ -101,10 +167,16 @@ export default function ShopFilters() {
       </div>
 
       <div>
-        <p>Sort by price:</p>
-        <select>
-          <option value="highest">Highest first</option>
-          <option value="lowest">Lowest first</option>
+        <p className="bold">Sort by price:</p>
+        <select
+          className="select"
+          value={sort}
+          onChange={(e) => {
+            setSort(e.target.value);
+          }}
+        >
+          <option value="lowest">Highest first</option>
+          <option value="highest">Lowest first</option>
         </select>
       </div>
     </div>
