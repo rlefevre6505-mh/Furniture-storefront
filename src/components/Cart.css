@@ -1,7 +1,7 @@
 .cart_panel_hidden {
   position: absolute;
   top: -100vh;
-  right: -100vh;
+  left: -200vh;
   overflow: hidden;
 }
 
@@ -9,7 +9,7 @@
   z-index: 2;
   position: fixed;
   top: 4px;
-  right: 0;
+  right: 1px;
   min-height: 70vh;
   min-width: 22vw;
   background-color: white;

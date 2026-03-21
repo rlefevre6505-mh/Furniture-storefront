@@ -15,7 +15,7 @@ export function getProductById(id) {
 }
 
 export const items = [
-  // CHAIRS
+  // SEATING
   {
     id: 1,
     category: "seating",
@@ -24,10 +24,13 @@ export const items = [
       "A contemporaray fabric covered dining chair in a tasteful mustard yellow",
     price: "49.99",
     image: "/images/chairs/aria-swivel-dining-chairs-yellow-weave.webp",
+    thumb:
+      "/images/chairs/optimised/aria-swivel-dining-chairs-yellow-weave.webp",
     dimensions: "",
     materials: "fabric",
     colours: [],
     tags: [],
+    popular: true,
     stock_level: 18,
   },
   {
@@ -38,11 +41,13 @@ export const items = [
       "A comfortable and stylish chair with a soft berry chenille fabric, perfect for relaxing in your living room.",
     price: "199.99",
     image: "/images/chairs/aura-snuggle-chair-berry-chenille.webp",
+    thumb: "/images/chairs/optimised/aura-snuggle-chair-berry-chenille.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 6,
   },
   {
@@ -54,11 +59,14 @@ export const items = [
     price: "54.99",
     image:
       "/images/chairs/bari-oatmeal-mottled-velvet-dining-chairs-with-black-legs.webp",
+    thumb:
+      "/images/chairs/optimised/bari-oatmeal-mottled-velvet-dining-chairs-with-black-legs.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 22,
   },
   {
@@ -70,11 +78,14 @@ export const items = [
     price: "59.99",
     image:
       "/images/chairs/billie-dark-grey-faux-leather-dining-chairs-with-black-metal-legs.webp",
+    thumb:
+      "/images/chairs/optimised/billie-dark-grey-faux-leather-dining-chairs-with-black-metal-legs.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: true,
     stock_level: 3,
   },
   {
@@ -85,11 +96,13 @@ export const items = [
       "A classic dining chair with a brown linen upholstery and wooden legs, perfect for a traditional dining room.",
     price: "49.99",
     image: "/images/chairs/cabrini-dining-chairs-brown-linen.webp",
+    thumb: "/images/chairs/optimised/cabrini-dining-chairs-brown-linen.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 3,
   },
   {
@@ -101,11 +114,14 @@ export const items = [
     price: "69.99",
     image:
       "/images/chairs/capri-grey-chenille-dining-chairs-with-chrome-metal-base.webp",
+    thumb:
+      "/images/chairs/optimised/capri-grey-chenille-dining-chairs-with-chrome-metal-base.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 3,
   },
   {
@@ -117,11 +133,14 @@ export const items = [
     price: "49.49",
     image:
       "/images/chairs/clifton-accent-chair-yellow-fabric-accent-chair.webp",
+    thumb:
+      "/images/chairs/optimised/clifton-accent-chair-yellow-fabric-accent-chair.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 0,
   },
   {
@@ -133,11 +152,14 @@ export const items = [
     price: "199.99",
     image:
       "/images/chairs/colette-360-degree-swivel-armchair-antique-green-mottled-velvet.webp",
+    thumb:
+      "/images/chairs/optimised/colette-360-degree-swivel-armchair-antique-green-mottled-velvet.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 0,
   },
   {
@@ -149,11 +171,14 @@ export const items = [
     price: "149.99",
     image:
       "/images/chairs/isla-upholstered-bench-luxury-cream-textured-chenille.webp",
+    thumb:
+      "/images/chairs/optimised/isla-upholstered-bench-luxury-cream-textured-chenille.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 0,
   },
   {
@@ -165,11 +190,14 @@ export const items = [
     price: "129.99",
     image:
       "/images/chairs/juno-black-faux-leather-dining-chairs-with-chrome-legs.webp",
+    thumb:
+      "/images/chairs/optimised/juno-black-faux-leather-dining-chairs-with-chrome-legs.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 0,
   },
   {
@@ -181,11 +209,14 @@ export const items = [
     price: "129.99",
     image:
       "/images/chairs/lusso-360-degree-swivel-dining-chairs-with-solid-oak-legs-toffee-textured-fabric.webp",
+    thumb:
+      "/images/chairs/optimised/lusso-360-degree-swivel-dining-chairs-with-solid-oak-legs-toffee-textured-fabric.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 0,
   },
   {
@@ -197,11 +228,14 @@ export const items = [
     price: "129.99",
     image:
       "/images/chairs/nori-modern-dining-chairs-cream-chenille-with-black-metal-legs.webp",
+    thumb:
+      "/images/chairs/optimised/nori-modern-dining-chairs-cream-chenille-with-black-metal-legs.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: true,
     stock_level: 0,
   },
   {
@@ -213,11 +247,14 @@ export const items = [
     price: "299.99",
     image:
       "/images/chairs/utah-zero-gravity-swivel-electric-recliner-armchair-pumpkin-chenille-fabric.webp",
+    thumb:
+      "/images/chairs/optimised/utah-zero-gravity-swivel-electric-recliner-armchair-pumpkin-chenille-fabric.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 0,
   },
   {
@@ -228,11 +265,13 @@ export const items = [
       "A modern armchair with a sleek design and a soft stone linen fabric, perfect for adding a touch of elegance to your living room.",
     price: "199.99",
     image: "/images/chairs/windsor-modern-armchair-stone-linen.webp",
+    thumb: "/images/chairs/optimised/windsor-modern-armchair-stone-linen.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 0,
   },
   {
@@ -244,11 +283,14 @@ export const items = [
     price: "149.99",
     image:
       "/images/chairs/zuri-swivel-accent-chair-oatmeal-soft-textured-weave-fabric.webp",
+    thumb:
+      "/images/chairs/optimised/zuri-swivel-accent-chair-oatmeal-soft-textured-weave-fabric.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 0,
   },
 
@@ -261,11 +303,13 @@ export const items = [
     description: "An elegant table lamp with an organic yet contemporary feel",
     price: "79.99",
     image: "/images/lighting/casa-organic-sculptured-table-lamp.webp",
+    thumb: "/images/lighting/optimised/casa-organic-sculptured-table-lamp.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -276,11 +320,14 @@ export const items = [
     price: "45.99",
     image:
       "/images/lighting/casa-ribbed-floor-lamp-with-washed-white-finish.webp",
+    thumb:
+      "/images/lighting/optimised/casa-ribbed-floor-lamp-with-washed-white-finish.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -291,11 +338,14 @@ export const items = [
     price: "84.99",
     image:
       "/images/lighting/floor-lamp-arched-metal-floor-lamp-with-brushed-gold-frame-and-marble-base.webp",
+    thumb:
+      "/images/lighting/optimised/floor-lamp-arched-metal-floor-lamp-with-brushed-gold-frame-and-marble-base.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: true,
     stock_level: 8,
   },
   {
@@ -306,11 +356,14 @@ export const items = [
     price: "69.99",
     image:
       "/images/lighting/floor-lamp-leaf-tree-metal-floor-lamp-with-gold-frame-and-base.webp",
+    thumb:
+      "/images/lighting/optimised/floor-lamp-leaf-tree-metal-floor-lamp-with-gold-frame-and-base.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -321,11 +374,14 @@ export const items = [
     price: "54.99",
     image:
       "/images/lighting/moda-textured-ceramic-table-lamp-with-antique-black-base.webp",
+    thumb:
+      "/images/lighting/optimised/moda-textured-ceramic-table-lamp-with-antique-black-base.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -336,11 +392,14 @@ export const items = [
     price: "39.99",
     image:
       "/images/lighting/newquay-black-and-white-table-lamp-with-neutral-fabric-shade.webp",
+    thumb:
+      "/images/lighting/optimised/newquay-black-and-white-table-lamp-with-neutral-fabric-shade.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -351,11 +410,14 @@ export const items = [
     price: "49.99",
     image:
       "/images/lighting/orange-glass-table-lamp-with-white-fabric-shade.webp",
+    thumb:
+      "/images/lighting/optimised/orange-glass-table-lamp-with-white-fabric-shade.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: true,
     stock_level: 8,
   },
   {
@@ -366,11 +428,14 @@ export const items = [
     price: "54.99",
     image:
       "/images/lighting/portree-cement-table-lamp-with-dark-grey-fabric-shade.webp",
+    thumb:
+      "/images/lighting/optimised/portree-cement-table-lamp-with-dark-grey-fabric-shade.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -381,11 +446,14 @@ export const items = [
     price: "65.99",
     image:
       "/images/lighting/table-lamp-brass-table-lamp-with-mushroom-shade.webp",
+    thumb:
+      "/images/lighting/optimised/table-lamp-brass-table-lamp-with-mushroom-shade.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -396,11 +464,14 @@ export const items = [
     price: "34.99",
     image:
       "/images/lighting/washed-blue-ceramic-table-lamp-with-white-fabric-shade.webp",
+    thumb:
+      "/images/lighting/optimised/washed-blue-ceramic-table-lamp-with-white-fabric-shade.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
 
@@ -413,11 +484,14 @@ export const items = [
     description: "",
     price: "899.99",
     image: "/images/sofas/carmen-black-velvet-3-seater-chesterfield-sofa.webp",
+    thumb:
+      "/images/sofas/optimised/carmen-black-velvet-3-seater-chesterfield-sofa.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -428,11 +502,14 @@ export const items = [
     price: "649.99",
     image:
       "/images/sofas/dakota-modern-2-dot-5-seater-sofa-dark-grey-woven-chenille.webp",
+    thumb:
+      "/images/sofas/optimised/dakota-modern-2-dot-5-seater-sofa-dark-grey-woven-chenille.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: true,
     stock_level: 8,
   },
   {
@@ -443,11 +520,14 @@ export const items = [
     price: "1299.99",
     image:
       "/images/sofas/fabio-right-hand-facing-corner-chaise-sofa-blue-weave.jpg",
+    thumb:
+      "/images/sofas/optimised/fabio-right-hand-facing-corner-chaise-sofa-blue-weave.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: true,
     stock_level: 8,
   },
   {
@@ -458,11 +538,14 @@ export const items = [
     price: "849.99",
     image:
       "/images/sofas/lauren-mink-velvet-2-seater-modern-chesterfield-sofa.webp",
+    thumb:
+      "/images/sofas/optimised/lauren-mink-velvet-2-seater-modern-chesterfield-sofa.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -473,11 +556,14 @@ export const items = [
     price: "649.99",
     image:
       "/images/sofas/marley-modular-2-dot-5-seater-sofa-seashell-fabric.webp",
+    thumb:
+      "/images/sofas/optimised/marley-modular-2-dot-5-seater-sofa-seashell-fabric.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -487,11 +573,13 @@ export const items = [
     description: "",
     price: "1149.99",
     image: "/images/sofas/nelson-3-seater-sofa-navy-blue-velvet.webp",
+    thumb: "/images/sofas/optimised/nelson-3-seater-sofa-navy-blue-velvet.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -501,11 +589,14 @@ export const items = [
     description: "",
     price: "749.99",
     image: "/images/sofas/porto-2-dot-5-seater-modern-linen-sofa.webp",
+    thumb:
+      "/images/sofas/optimised/porto-2-dot-5-seater-modern-linen-sofa.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -516,11 +607,14 @@ export const items = [
     price: "949.99",
     image:
       "/images/sofas/porto-extra-large-3-dot-5-seater-luxury-modern-sofa-soft-cream-premium-linen.webp",
+    thumb:
+      "/images/sofas/optimised/porto-extra-large-3-dot-5-seater-luxury-modern-sofa-soft-cream-premium-linen.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -530,11 +624,14 @@ export const items = [
     description: "",
     price: "899.99",
     image: "/images/sofas/windsor-modern-3-seater-sofa-light-grey-linen.webp",
+    thumb:
+      "/images/sofas/optimised/windsor-modern-3-seater-sofa-light-grey-linen.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -544,11 +641,14 @@ export const items = [
     description: "",
     price: "1449.99",
     image: "/images/sofas/windsor-modern-corner-sofa-stone-linen.webp",
+    thumb:
+      "/images/sofas/optimised/windsor-modern-corner-sofa-stone-linen.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
 
@@ -562,11 +662,14 @@ export const items = [
     price: "129.99",
     image:
       "/images/tables/77cm-round-coffee-table-amber-glass-with-brass-effect-finish.webp",
+    thumb:
+      "/images/tables/optimised/77cm-round-coffee-table-amber-glass-with-brass-effect-finish.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: true,
     stock_level: 8,
   },
   {
@@ -577,11 +680,14 @@ export const items = [
     price: "99.99",
     image:
       "/images/tables/80cm-round-coffee-table-glass-top-with-rattan-shelf-and-metal-base.webp",
+    thumb:
+      "/images/tables/optimised/80cm-round-coffee-table-glass-top-with-rattan-shelf-and-metal-base.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -592,11 +698,14 @@ export const items = [
     price: "145.99",
     image:
       "/images/tables/83cm-round-coffee-table-travertine-style-marble-and-wood.webp",
+    thumb:
+      "/images/tables/optimised/83cm-round-coffee-table-travertine-style-marble-and-wood.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -607,11 +716,14 @@ export const items = [
     price: "179.99",
     image:
       "/images/tables/102-dot-5-cm-rectangle-coffee-table-amber-glass-with-brass-effect-finish.webp",
+    thumb:
+      "/images/tables/optimised/102-dot-5-cm-rectangle-coffee-table-amber-glass-with-brass-effect-finish.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -622,11 +734,14 @@ export const items = [
     price: "229.99",
     image:
       "/images/tables/alder-180cm-live-edge-solid-oak-dining-table-with-black-legs.webp",
+    thumb:
+      "/images/tables/optimised/alder-180cm-live-edge-solid-oak-dining-table-with-black-legs.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: true,
     stock_level: 8,
   },
   {
@@ -637,10 +752,13 @@ export const items = [
     price: "299.99",
     image:
       "/images/tables/allegra-160cm-to-200cm-extendable-oval-dining-table-oak-veneer.webp",
+    thumb:
+      "/images/tables/optimised/allegra-160cm-to-200cm-extendable-oval-dining-table-oak-veneer.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
+    popular: false,
     tags: [],
     stock_level: 8,
   },
@@ -652,11 +770,14 @@ export const items = [
     price: "299.99",
     image:
       "/images/tables/alsace-2m-reclaimed-wood-dining-table-with-black-metal-legs-artisan-rustic-collection.webp",
+    thumb:
+      "/images/tables/optimised/alsace-2m-reclaimed-wood-dining-table-with-black-metal-legs-artisan-rustic-collection.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: true,
     stock_level: 8,
   },
   {
@@ -667,11 +788,14 @@ export const items = [
     price: "279.99",
     image:
       "/images/tables/immi-160cm-calacatta-gold-stone-dining-table-with-black-metal-legs.webp",
+    thumb:
+      "/images/tables/optimised/immi-160cm-calacatta-gold-stone-dining-table-with-black-metal-legs.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -682,11 +806,14 @@ export const items = [
     price: "109.99",
     image:
       "/images/tables/immi-calacatta-gold-stone-side-table-with-black-metal-legs.webp",
+    thumb:
+      "/images/tables/optimised/immi-calacatta-gold-stone-side-table-with-black-metal-legs.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -697,11 +824,14 @@ export const items = [
     price: "164.99",
     image:
       "/images/tables/immi-pacific-grey-stone-console-table-with-black-metal-legs.webp",
+    thumb:
+      "/images/tables/optimised/immi-pacific-grey-stone-console-table-with-black-metal-legs.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -712,11 +842,14 @@ export const items = [
     price: "199.99",
     image:
       "/images/tables/lucian-120cm-to-160cm-oak-effect-extendable-round-dining-table-with-black-legs.webp",
+    thumb:
+      "/images/tables/optimised/lucian-120cm-to-160cm-oak-effect-extendable-round-dining-table-with-black-legs.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -727,11 +860,14 @@ export const items = [
     price: "244.99",
     image:
       "/images/tables/nico-160cm-medium-oak-effect-dining-table-with-black-metal-base.webp",
+    thumb:
+      "/images/tables/optimised/nico-160cm-medium-oak-effect-dining-table-with-black-metal-base.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -742,11 +878,14 @@ export const items = [
     price: "349.99",
     image:
       "/images/tables/rufino-tundra-grey-stone-coffee-table-with-stainless-steel-base.webp",
+    thumb:
+      "/images/tables/optimised/rufino-tundra-grey-stone-coffee-table-with-stainless-steel-base.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   {
@@ -757,11 +896,14 @@ export const items = [
     price: "399.99",
     image:
       "/images/tables/vermont-extendable-dining-table-with-sculptural-base-dark-grey-gloss.webp",
+    thumb:
+      "/images/tables/optimised/vermont-extendable-dining-table-with-sculptural-base-dark-grey-gloss.webp",
     dimensions: "",
     materials: "",
     finish: "",
     colours: [],
     tags: [],
+    popular: false,
     stock_level: 8,
   },
   // {

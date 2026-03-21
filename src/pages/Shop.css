@@ -4,7 +4,7 @@
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   margin: 0 2.4rem 2.4rem 2.4rem;
-  padding-top: 4rem;
+  /* padding-top: 0.4rem; */
 }
 
 .product-div {
@@ -87,11 +87,27 @@
   cursor: pointer;
 }
 
+.icon_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #ebebeb;
+  padding-bottom: 0.4rem;
+  h2 {
+    font-size: 1.2rem;
+    color: var(--brand-color1);
+  }
+}
+
 .menu_icon {
   width: 2rem;
-  position: absolute;
-  top: 8px;
-  left: 4px;
+  /* position: absolute; */
+  /* top: 8px;
+  left: 4px; */
+  margin-top: 0.4rem;
   padding: 0 0.2rem 0 0.2rem;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -107,9 +123,10 @@
 
 .cart_icon {
   width: 2rem;
-  position: absolute;
-  top: 8px;
-  right: 4px;
+  /* position: absolte; */
+  /* top: 8px;
+  right: 4px; */
+  margin-top: 0.4rem;
   padding: 0 0.2rem 0 0.2rem;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 8px;

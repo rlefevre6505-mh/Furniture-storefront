@@ -175,6 +175,7 @@ export default function ShopFilters({
             setSort(e.target.value);
           }}
         >
+          <option value="popular">Most popular</option>
           <option value="lowest">Highest first</option>
           <option value="highest">Lowest first</option>
         </select>

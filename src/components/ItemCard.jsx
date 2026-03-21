@@ -14,7 +14,7 @@ export default function ItemCard({ item, i }) {
     <div key={`div${i}`} className="product-div">
       <Link className="link" key={`link${i}`} to={`/shop/product/${item.id}`}>
         <img
-          src={item.image}
+          src={item.thumb}
           alt={item.title}
           loading="lazy"
           decoding="async"

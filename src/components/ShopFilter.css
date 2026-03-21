@@ -11,9 +11,9 @@
 
 .filter_panel_show {
   z-index: 2;
-  position: absolute;
+  position: fixed;
   top: 4px;
-  left: 0;
+  left: 1px;
   min-height: 70vh;
   min-width: 22vw;
   background-color: white;
