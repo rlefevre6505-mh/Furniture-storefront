@@ -12,8 +12,8 @@
 .filter_panel_show {
   z-index: 2;
   position: fixed;
-  top: 4px;
-  left: 1px;
+  top: 0;
+  left: 0px;
   min-height: 70vh;
   min-width: 22vw;
   background-color: white;
@@ -21,6 +21,8 @@
   border: 2px solid var(--brand-color1);
   border-radius: 4px;
   overflow-y: auto;
+  z-index: 4;
+  height: 96vh;
 }
 
 .checkbox_container {

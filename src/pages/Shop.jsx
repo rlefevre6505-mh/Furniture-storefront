@@ -80,12 +80,13 @@ export default function ShopPage() {
           >
             <path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z" />
           </svg>
-
-          {sort === "popular" && <h2>Popular Products</h2>}
-          {sort === "highest" && (
+          {/* 
+{sort === "popular" && (
             <h2>All products - sorted by highest price</h2>
-          )}
-          {sort === "lowest" && <h2>All products - sorted by lowest price</h2>}
+          )} */}
+          {sort === "popular" && <h2>Popular Products</h2>}
+          {sort === "highest" && <h2>Products sorted by highest price</h2>}
+          {sort === "lowest" && <h2>Products sorted by lowest price</h2>}
 
           <svg
             className="cart_icon"
