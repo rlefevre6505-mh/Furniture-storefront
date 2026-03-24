@@ -2,15 +2,17 @@
   height: 90vh;
   width: 100%;
   margin: auto;
-  margin-top: 18.5vh;
+  margin-top: 19vh;
   background-color: var(--bg-color1);
 }
 
 .heroImage-wrapper {
+  z-index: 0;
   position: relative;
 }
 
 .slide {
+  z-index: 1;
   width: 100%;
   max-height: 80vh;
   scroll-snap-align: start;
@@ -19,22 +21,26 @@
   justify-content: center;
   align-items: center;
   transition: opacity 0.6s ease-in-out;
+}
 
-  .heroImage {
-    max-width: 80vw;
-    max-height: 80vh;
-    border-radius: 2px;
-    align-self: center;
-    box-shadow: -2px -2px 1px rgba(106, 106, 106, 0.1);
-  }
+.heroImage {
+  z-index: 3;
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 2px;
+  align-self: center;
+  box-shadow: -2px -2px 1px rgba(106, 106, 106, 0.1);
+  background-color: transparent;
 }
 
 .fade-in {
   opacity: 1;
+  background-color: transparent;
 }
 
 .fade-out {
   opacity: 0;
+  background-color: transparent;
 }
 
 .div0 {

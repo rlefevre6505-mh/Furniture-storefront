@@ -22,15 +22,20 @@ header {
 }
 
 .logo {
+  position: relative;
   height: 60px;
   width: 60px;
   border-radius: 50%;
+  background-color: var(--bg-color2);
 
-  background-image: linear-gradient(
-    to top,
-    rgb(204, 222, 226),
-    rgb(70, 152, 37)
-  );
+  .leaf_logo {
+    position: absolute;
+    top: 8px;
+    left: 9px;
+    width: 40px;
+    height: 40px;
+    fill: var(--brand-color2);
+  }
 }
 
 h1 {
