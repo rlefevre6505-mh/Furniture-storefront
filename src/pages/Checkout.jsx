@@ -132,8 +132,8 @@ export default function Checkout() {
     try {
       // Call your backend to create a checkout session
       const response = await fetch(
-        // "https://furniture-storefront-server.onrender.com/api/create-checkout-session",
-        "https://furniture-storefront-server.onrender.com/api/create-payment-intent",
+        "https://furniture-storefront-server.onrender.com/api/create-checkout-session",
+        // "https://furniture-storefront-server.onrender.com/api/create-payment-intent",
         {
           method: "POST",
           headers: {
