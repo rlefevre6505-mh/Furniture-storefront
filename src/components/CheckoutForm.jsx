@@ -1,36 +1,40 @@
+import {
+  useStripe,
+  useElements,
+  PaymentElement,
+} from "@stripe/react-stripe-js";
 import { useState } from "react";
-import { PaymentElement, useElements, useStripe } from "@stripe/react-stripe-js";
 
-const CheckoutForm = ({ onSuccess }) => {
+export default function CheckoutForm() {
   const stripe = useStripe();
   const elements = useElements();
-  const [message, setMessage] = useState("");
   const [isProcessing, setIsProcessing] = useState(false);
+  const [paymentStatus, setPaymentStatus] = useState("");
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
     if (!stripe || !elements) {
       return;
     }
 
     setIsProcessing(true);
-    setMessage("");
 
-    const { error } = await stripe.confirmPayment({
+    const { error, paymentIntent } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        // Redirect back to the same page after payment.
-        return_url: window.location.href,
+        return_url: `${window.location.origin}/payment-complete`,
       },
       redirect: "if_required",
     });
 
     if (error) {
-      setMessage(error.message || "An unexpected error occurred.");
+      setPaymentStatus(`Payment failed: ${error.message}`);
+    } else if (paymentIntent && paymentIntent.status === "succeeded") {
+      setPaymentStatus("Payment succeeded!");
+      // Handle successful payment here (e.g., clear cart, show confirmation)
     } else {
-      setMessage("Payment succeeded!");
-      onSuccess?.();
+      setPaymentStatus("Payment processing...");
     }
 
     setIsProcessing(false);
@@ -38,13 +42,15 @@ const CheckoutForm = ({ onSuccess }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <PaymentElement options={{ layout: "accordion" }} />
-      <button type="submit" disabled={isProcessing || !stripe || !elements}>
-        {isProcessing ? "Processing…" : "Pay"}
+      <PaymentElement />
+      <button
+        disabled={!stripe || isProcessing}
+        className="checkout_button"
+        style={{ marginTop: "20px" }}
+      >
+        {isProcessing ? "Processing..." : "Pay Now"}
       </button>
-      {message ? <div className="checkout_message">{message}</div> : null}
+      {paymentStatus && <div className="payment-status">{paymentStatus}</div>}
     </form>
   );
-};
-
-export default CheckoutForm;
+}

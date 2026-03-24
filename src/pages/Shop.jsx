@@ -14,7 +14,7 @@ export default function ShopPage() {
     "lighting",
   ]); // category checkboxes selected
   const [values, setValues] = useState([1, 1600]); // min-max values of price range slider
-  const [sort, setSort] = useState("popular"); // sort by price, highest first by default
+  const [sort, setSort] = useState("featured"); // sort by price, highest first by default
   const [filtersHidden, setFiltersHidden] = useState(true);
   const [cartHidden, setCartHidden] = useState(true);
   // const [cartHidden, setCartHidden] = useState(true);
@@ -29,8 +29,8 @@ export default function ShopPage() {
       const sortedProducts = items.sort((a, b) => a.price - b.price);
       setShowItems([...sortedProducts]);
     }
-    if (sort === "popular") {
-      const sortedProducts = items.filter((item) => item.popular === true);
+    if (sort === "featured") {
+      const sortedProducts = items.filter((item) => item.featured === true);
       setShowItems([...sortedProducts]);
     }
   }, [sort]);
@@ -81,12 +81,12 @@ export default function ShopPage() {
             <path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z" />
           </svg>
           {/* 
-{sort === "popular" && (
+{sort === "featured" && (
             <h2>All products - sorted by highest price</h2>
           )} */}
-          {sort === "popular" && <h2>Popular Products</h2>}
-          {sort === "highest" && <h2>Products sorted by highest price</h2>}
-          {sort === "lowest" && <h2>Products sorted by lowest price</h2>}
+          {sort === "featured" && <h2>Featured Products</h2>}
+          {sort === "highest" && <h2>Products sorted by lowest price</h2>}
+          {sort === "lowest" && <h2>Products sorted by highest price</h2>}
 
           <svg
             className="cart_icon"

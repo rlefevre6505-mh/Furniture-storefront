@@ -1,0 +1,125 @@
+.hero {
+  position: relative;
+  color: white;
+  text-align: center;
+  transition: filter 0.8s ease;
+  -webkit-transition: filter 0.8s ease;
+
+  .hero_image {
+    width: 100%;
+    filter: brightness(30%);
+    transition: filter 0.8s ease;
+    -webkit-transition: filter 0.8s ease;
+  }
+  .h2 {
+    position: absolute;
+    width: 100%;
+    font-size: 2.4rem;
+    top: 35%;
+  }
+  .p {
+    position: absolute;
+    width: 100%;
+    font-size: 1.6rem;
+    top: 60%;
+  }
+}
+
+.hero:hover {
+  -webkit-filter: brightness(180%);
+  filter: brightness(180%);
+}
+
+.about {
+  margin: auto;
+  max-width: 76ch;
+  line-height: 2.2;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .spacer {
+    height: 0.4rem;
+  }
+}
+
+.qualities {
+  width: 100%;
+  margin: 4rem 0 2rem 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding: 60px 0 50px 0;
+
+  .quality {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 20%;
+  }
+}
+
+.svg {
+  margin: auto;
+  background-color: var(--brand-color1);
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.svg_sm {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  margin-right: 2rem;
+  background-color: var(--brand-color1);
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.contact_container {
+  max-width: 100%;
+  margin: 0 8rem 4rem 8rem;
+
+  h2 {
+    color: var(--brand-color1);
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .contact1 {
+    width: 30%;
+    border: 2px solid white;
+    background-color: var(--bg-color1);
+    border-radius: 8px;
+    padding: 0.8rem 2rem;
+
+    .detail {
+      display: flex;
+      justify-content: flex-start;
+
+      .svg_sm {
+        flex: 0 0 auto;
+      }
+
+      .detail_text {
+        flex: 1 1 auto;
+      }
+    }
+  }
+
+  .contact2 {
+    width: 30%;
+    border: 2px solid white;
+    background-color: var(--bg-color1);
+    border-radius: 8px;
+    padding: 0.8rem 2rem;
+  }
+}

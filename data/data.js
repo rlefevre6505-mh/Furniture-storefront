@@ -30,7 +30,7 @@ export const items = [
     materials: "fabric",
     colours: [],
     tags: [],
-    popular: true,
+    featured: true,
     stock_level: 18,
   },
   {
@@ -47,7 +47,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 6,
   },
   {
@@ -66,7 +66,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 22,
   },
   {
@@ -85,7 +85,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: true,
+    featured: true,
     stock_level: 3,
   },
   {
@@ -102,7 +102,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 3,
   },
   {
@@ -121,7 +121,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 3,
   },
   {
@@ -140,7 +140,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 0,
   },
   {
@@ -159,7 +159,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 0,
   },
   {
@@ -178,7 +178,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 0,
   },
   {
@@ -197,7 +197,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 0,
   },
   {
@@ -216,7 +216,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 0,
   },
   {
@@ -235,7 +235,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: true,
+    featured: true,
     stock_level: 0,
   },
   {
@@ -254,7 +254,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 0,
   },
   {
@@ -271,7 +271,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 0,
   },
   {
@@ -290,7 +290,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 0,
   },
 
@@ -309,7 +309,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -327,7 +327,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -345,7 +345,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: true,
+    featured: true,
     stock_level: 8,
   },
   {
@@ -363,7 +363,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -381,7 +381,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -399,7 +399,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -417,7 +417,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: true,
+    featured: true,
     stock_level: 8,
   },
   {
@@ -435,7 +435,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -453,7 +453,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -471,7 +471,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
 
@@ -491,7 +491,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -509,7 +509,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: true,
+    featured: true,
     stock_level: 8,
   },
   {
@@ -527,7 +527,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: true,
+    featured: true,
     stock_level: 8,
   },
   {
@@ -545,7 +545,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -563,7 +563,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -579,7 +579,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -596,7 +596,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -614,7 +614,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -631,7 +631,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -648,7 +648,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
 
@@ -669,7 +669,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: true,
+    featured: true,
     stock_level: 8,
   },
   {
@@ -687,7 +687,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -705,7 +705,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -723,7 +723,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -741,7 +741,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: true,
+    featured: true,
     stock_level: 8,
   },
   {
@@ -758,7 +758,7 @@ export const items = [
     materials: "",
     finish: "",
     colours: [],
-    popular: false,
+    featured: false,
     tags: [],
     stock_level: 8,
   },
@@ -777,7 +777,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: true,
+    featured: true,
     stock_level: 8,
   },
   {
@@ -795,7 +795,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -813,7 +813,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -831,7 +831,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -849,7 +849,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -867,7 +867,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -885,7 +885,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   {
@@ -903,7 +903,7 @@ export const items = [
     finish: "",
     colours: [],
     tags: [],
-    popular: false,
+    featured: false,
     stock_level: 8,
   },
   // {

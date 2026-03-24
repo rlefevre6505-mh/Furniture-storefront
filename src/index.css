@@ -13,5 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   --brand-color1: rgb(50, 123, 141);
+  --brand-color2: rgb(21, 162, 106);
   --bg-color1: #ebebeb;
+  --bg-color2: #cecece;
 }

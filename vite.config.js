@@ -43,7 +43,9 @@ export default defineConfig(({ mode }) => {
           });
 
           res.setHeader("Content-Type", "application/json");
-          res.end(JSON.stringify({ client_secret: paymentIntent.client_secret }));
+          res.end(
+            JSON.stringify({ client_secret: paymentIntent.client_secret }),
+          );
         } catch (error) {
           res.statusCode = 500;
           res.setHeader("Content-Type", "application/json");
