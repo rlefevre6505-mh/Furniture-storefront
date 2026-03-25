@@ -145,7 +145,7 @@ export default function Checkout() {
                 currency: "gbp",
                 product_data: {
                   name: item.product.title,
-                  images: [item.product.image],
+                  // images: [item.product.image],
                 },
                 unit_amount: Math.round(item.product.price * 100),
               },
