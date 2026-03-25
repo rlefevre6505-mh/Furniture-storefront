@@ -8,6 +8,8 @@ import AboutPage from "./pages/AboutPage";
 import Checkout from "./pages/Checkout";
 import Header from "./components/Header";
 import CartProvider from "./context/CartContext";
+import PaymentSuccess from "./pages/PaymentSuccess";
+import PaymentFailure from "./pages/PaymentFailure";
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
           <Route path="/shop/product/:id" element={<ProductDetails />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/success" element={<PaymentSuccess />} />
+          <Route path="/cancel" element={<PaymentFailure />} />
           {/* <Route path="/signup" element={<Signup />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
