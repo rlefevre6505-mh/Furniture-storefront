@@ -26,6 +26,8 @@
   width: 100%;
   overflow: clip;
   height: 100%;
+  transition: filter 0.8s ease;
+  -webkit-transition: filter 0.8s ease;
 
   img {
     z-index: -1;

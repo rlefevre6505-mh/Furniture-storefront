@@ -87,6 +87,10 @@
     text-align: center;
   }
 
+  h3 {
+    font-size: 1.6rem;
+  }
+
   .contact {
     display: flex;
     flex-direction: row;
@@ -100,6 +104,8 @@
     background-color: var(--bg-color1);
     border-radius: 8px;
     padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
 
     .detail {
       display: flex;
@@ -121,5 +127,57 @@
     background-color: var(--bg-color1);
     border-radius: 8px;
     padding: 0.8rem 2rem;
+
+    .contact_form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
   }
+
+  form {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .form_div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      label {
+        margin-top: 0.8rem;
+      }
+
+      input {
+        margin: 0.4rem auto;
+        max-width: 80%;
+        background-color: white;
+        padding: 0.2rem;
+        border: 2px solid var(--brand-color1);
+        border-radius: 4px;
+        color-scheme: light;
+        color: black;
+      }
+
+      .textarea {
+        width: 95%;
+        margin: 0.4rem auto;
+        background-color: white;
+        border: 2px solid var(--brand-color1);
+        border-radius: 4px;
+        color: black;
+      }
+    }
+  }
+}
+
+.submit_button {
+  background-color: var(--brand-color1);
+  margin: 0.4rem auto;
+  width: 50%;
+  padding: 4px 12px;
+  border: 2px solid white;
+  border-radius: 4px;
 }
