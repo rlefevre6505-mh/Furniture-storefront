@@ -147,7 +147,7 @@ export default function Checkout() {
                   name: item.product.title,
                   images: [item.product.image],
                 },
-                unit_amount: Math.round(item.product.price * 100), // Convert to cents
+                unit_amount: Math.round(item.product.price * 100),
               },
               quantity: item.quantity,
             })),
@@ -167,7 +167,7 @@ export default function Checkout() {
 
   return (
     <div className="chackout_page">
-      <div className="container">
+      <div className="checkout_container">
         <h2 className="chackout_title">Checkout</h2>
         <div className="checkout_container">
           {/* Cart items display */}
