@@ -24,7 +24,6 @@ export default function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/success" element={<PaymentSuccess />} />
           <Route path="/cancel" element={<PaymentFailure />} />
-          {/* <Route path="/signup" element={<Signup />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
