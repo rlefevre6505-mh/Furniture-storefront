@@ -1,117 +1,3 @@
-// import { useEffect, useState } from "react";
-// import { Elements } from "@stripe/react-stripe-js";
-// import { loadStripe } from "@stripe/stripe-js";
-
-// import { useCart } from "../context/CartContext";
-// import "./Checkout.css";
-// import CheckoutForm from "../components/CheckoutForm";
-
-// // Load Stripe with your test publishable key
-// const stripePromise = loadStripe(
-//   "pk_test_51TBbvNIw6FEYqJaKHTvRVXJmJnc1lxtXMpN0IRYJNbW2Mf4rzKrK9uwH6jl7XaRfJ6lLjgaEaxaAMj6SPaINJwrl00lJp5i3zT",
-// );
-
-// export default function Checkout() {
-//   const [clientSecret, setClientSecret] = useState("");
-//   const {
-//     getCartItemsWithProducts,
-//     updateQuantity,
-//     removeFromCart,
-//     getCartTotal,
-//   } = useCart();
-//   const cartItems = getCartItemsWithProducts();
-//   const total = getCartTotal();
-
-//   // Create payment intent when cart total changes
-//   useEffect(() => {
-//     if (total > 0) {
-//       // Call your backend to create a payment intent
-//       fetch("/api/create-payment-intent", {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({
-//           amount: Math.round(total * 100), // Convert to cents
-//           currency: "gbp",
-//         }),
-//       })
-//         .then((res) => res.json())
-//         .then((data) => setClientSecret(data.clientSecret));
-//     }
-//   }, [total]);
-
-//   return (
-//     <div className="chackout_page">
-//       <div className="container">
-//         <h2 className="chackout_title">Checkout</h2>
-//         <div className="checkout_container">
-//           {/* Cart items display - unchanged */}
-//           <div className="checkout_items">
-//             <h3 className="checkout_summary">Order Summary</h3>
-//             {cartItems.map((item) => (
-//               <div key={`product${item.id}`} className="checkout_item">
-//                 <img
-//                   className="checkout_image"
-//                   src={item.product.image}
-//                   alt={item.product.title}
-//                 />
-//                 <div className="checkout_item_details">
-//                   <h4 className="checkout_item_name">{item.product.title}</h4>
-//                   <p className="checkout_item_price">{`£${item.product.price} each`}</p>
-//                 </div>
-//                 <div className="checkout_item_controls">
-//                   <button
-//                     className="quantity_button"
-//                     onClick={() => updateQuantity(item.id, item.quantity - 1)}
-//                   >
-//                     -
-//                   </button>
-//                   <span className="quantity_value">{item.quantity}</span>
-//                   <button
-//                     className="quantity_button"
-//                     onClick={() => updateQuantity(item.id, item.quantity + 1)}
-//                   >
-//                     +
-//                   </button>
-//                   <p className="checkout_item_total">{`£${(item.product.price * item.quantity).toFixed(2)}`}</p>
-//                   <button
-//                     className="cart_button"
-//                     onClick={() => removeFromCart(item.id)}
-//                   >
-//                     Remove
-//                   </button>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//           <div className="checkout_summary">
-//             <h5>Order Summary</h5>
-//             <p>Total: £{total.toFixed(2)}</p>
-//             {/* Stripe checkout button */}
-//             {clientSecret && (
-//               <Elements stripe={stripePromise} options={{ clientSecret }}>
-//                 <CheckoutForm />
-//               </Elements>
-//             )}
-//             {!clientSecret && (
-//               <button
-//                 className="checkout_button"
-//                 onClick={() => {
-//                   // For simplified testing without backend
-//                   window.location.href = "https://checkout.stripe.dev/preview";
-//                 }}
-//               >
-//                 Proceed to Payment
-//               </button>
-//             )}
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
 import "./Checkout.css";
@@ -133,7 +19,6 @@ export default function Checkout() {
       // Call your backend to create a checkout session
       const response = await fetch(
         "https://furniture-storefront-server.onrender.com/api/create-checkout-session",
-        // "https://furniture-storefront-server.onrender.com/api/create-payment-intent",
         {
           method: "POST",
           headers: {
@@ -145,7 +30,6 @@ export default function Checkout() {
                 currency: "gbp",
                 product_data: {
                   name: item.product.title,
-                  // images: [item.product.image],
                 },
                 unit_amount: Math.round(item.product.price * 100),
               },
@@ -167,14 +51,14 @@ export default function Checkout() {
 
   return (
     <div className="chackout_page">
+      <h2 className="chackout_title">Checkout</h2>
       <div className="checkout_container">
-        <h2 className="chackout_title">Checkout</h2>
-        <div className="checkout_container">
-          {/* Cart items display */}
-          <div className="checkout_items">
-            <h3 className="checkout_summary">Order Summary</h3>
-            {cartItems.map((item) => (
-              <div key={`product${item.id}`} className="checkout_item">
+        {/* Cart items display */}
+        <div className="checkout_items">
+          <h3 className="checkout_summary">Order Summary</h3>
+          {cartItems.map((item) => (
+            <div key={`product${item.id}`} className="checkout_item">
+              <div className="checkout_info">
                 <img
                   className="checkout_image"
                   src={item.product.image}
@@ -182,9 +66,12 @@ export default function Checkout() {
                 />
                 <div className="checkout_item_details">
                   <h4 className="checkout_item_name">{item.product.title}</h4>
-                  <p className="checkout_item_price">{`£${item.product.price} each`}</p>
+                  <p className="checkout_item_price">{`Price: £${item.product.price}`}</p>
+                  <p className="checkout_item_total">{`Subtotal: £${(item.product.price * item.quantity).toFixed(2)}`}</p>
                 </div>
-                <div className="checkout_item_controls">
+              </div>
+              <div className="checkout_item_controls">
+                <div>
                   <button
                     className="quantity_button"
                     onClick={() => updateQuantity(item.id, item.quantity - 1)}
@@ -198,29 +85,29 @@ export default function Checkout() {
                   >
                     +
                   </button>
-                  <p className="checkout_item_total">{`£${(item.product.price * item.quantity).toFixed(2)}`}</p>
-                  <button
-                    className="cart_button"
-                    onClick={() => removeFromCart(item.id)}
-                  >
-                    Remove
-                  </button>
                 </div>
+                {/* <p className="checkout_item_total">{`Subtotal: £${(item.product.price * item.quantity).toFixed(2)}`}</p> */}
+                <button
+                  className="cart_button"
+                  onClick={() => removeFromCart(item.id)}
+                >
+                  Remove
+                </button>
               </div>
-            ))}
-          </div>
-          <div className="checkout_summary">
-            <h5>Order Summary</h5>
-            <p>Total: £{total.toFixed(2)}</p>
-            {/* Stripe checkout button */}
-            <button
-              className="checkout_button"
-              onClick={handleCheckout}
-              disabled={isLoading || cartItems.length === 0}
-            >
-              {isLoading ? "Processing..." : "Proceed to Payment"}
-            </button>
-          </div>
+            </div>
+          ))}
+        </div>
+        <div className="checkout_summary">
+          <h5>Order Summary</h5>
+          <p>Total: £{total.toFixed(2)}</p>
+          {/* Stripe checkout button */}
+          <button
+            className="checkout_button"
+            onClick={handleCheckout}
+            disabled={isLoading || cartItems.length === 0}
+          >
+            {isLoading ? "Processing..." : "Proceed to Payment"}
+          </button>
         </div>
       </div>
     </div>

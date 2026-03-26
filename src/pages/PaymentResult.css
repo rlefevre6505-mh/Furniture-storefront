@@ -1,0 +1,5 @@
+.payment-success,
+.payment-failure {
+  margin: 25vh auto auto auto;
+  text-align: center;
+}
