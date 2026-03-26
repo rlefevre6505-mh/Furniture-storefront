@@ -50,8 +50,8 @@ export default function Checkout() {
   };
 
   return (
-    <div className="chackout_page">
-      <h2 className="chackout_title">Checkout</h2>
+    <div className="checkout_page">
+      <h2 className="checkout_title">Checkout</h2>
       <div className="checkout_container">
         {/* Cart items display */}
         <div className="checkout_items">
