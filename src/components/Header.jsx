@@ -1,7 +1,10 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import "./Header.css";
 
 export default function Header() {
+  const location = useLocation();
+  console.log(location.pathname);
+
   return (
     <header>
       <div className="branding-div">
@@ -20,7 +23,6 @@ export default function Header() {
             </metadata>
             <g
               transform="translate(0.000000,1169.000000) scale(0.100000,-0.100000)"
-              // fill="#000000"
               stroke="none"
             >
               <path d="M11975 11683 c-49 -2 -200 -10 -334 -18 -1403 -89 -2667 -379 -3644 -836 -1024 -479 -1749 -1155 -2124 -1981 -175 -387 -274 -779 -314 -1245 -15 -187 -7 -699 16 -888 20 -174 58 -411 91 -575 49 -240 182 -737 183 -685 27 827 102 1402 252 1935 279 988 793 1761 1650 2478 1002 839 2444 1456 4022 1722 203 34 304 48 642 89 53 6 20 8 -140 8 -115 -1 -250 -2 -300 -4z" />
@@ -32,12 +34,37 @@ export default function Header() {
         <h1>Stoneleaf Furninshings</h1>
       </div>
       <nav className="nav">
-        <Link to="/">Home</Link>
-        <Link to="/shop">Shop</Link>
-        {/* <Link to="/signup">Signup</Link> */}
-        <Link to="/checkout">Checkout</Link>
+        <Link
+          className={location.pathname === "/" ? "link link_active" : "link"}
+          to="/"
+        >
+          Home
+        </Link>
+        <Link
+          className={
+            location.pathname === "/shop" ? "link link_active" : "link"
+          }
+          to="/shop"
+        >
+          Shop
+        </Link>
+        <Link
+          className={
+            location.pathname === "/about" ? "link link_active" : "link"
+          }
+          to="/about"
+        >
+          About
+        </Link>
+        <Link
+          className={
+            location.pathname === "/checkout" ? "link link_active" : "link"
+          }
+          to="/checkout"
+        >
+          Checkout
+        </Link>
       </nav>
-      <div></div>
     </header>
   );
 }

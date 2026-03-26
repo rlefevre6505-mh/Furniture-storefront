@@ -1,4 +1,5 @@
 import "./App.css";
+import "./fonts.css";
 import { BrowserRouter, Routes, Route } from "react-router";
 import ShopPage from "./pages/Shop";
 import HomePage from "./pages/Home";

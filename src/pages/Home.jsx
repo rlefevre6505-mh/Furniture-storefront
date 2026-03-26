@@ -36,7 +36,7 @@ export default function HomePage() {
           Experience our furniture in person. Schedule a private consultation
           with our design experts.
         </p>
-        <Link to="/about" className="a">
+        <Link to="/about#contact" className="a">
           <span>Learn More</span>
         </Link>
       </section>

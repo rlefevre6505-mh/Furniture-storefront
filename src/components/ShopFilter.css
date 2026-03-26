@@ -25,6 +25,9 @@
   height: 96vh;
 }
 
+.filter_p {
+}
+
 .checkbox_container {
   position: relative;
   display: flex;
@@ -50,8 +53,8 @@
   background-color: var(--brand-color1);
 }
 
-.slider {
-  margin: auto;
+.slider_div {
+  margin-top: -1.2rem;
 }
 
 .select {
@@ -62,4 +65,5 @@
 .bold {
   font-weight: 600;
   color: var(--brand-color1);
+  margin-top: 3.6rem;
 }

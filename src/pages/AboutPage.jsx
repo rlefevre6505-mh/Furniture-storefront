@@ -1,4 +1,6 @@
 import "./AboutPage.css";
+import { useEffect } from "react";
+import { useLocation } from "react-router";
 import {
   TickIcon,
   LeafIcon,
@@ -10,6 +12,16 @@ import {
 } from "../components/icons";
 
 export default function AboutPage() {
+  const { hash } = useLocation();
+  useEffect(() => {
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
+
   return (
     <>
       {" "}
@@ -81,7 +93,7 @@ export default function AboutPage() {
       </section>
       <section className="contact_container">
         <h2>Visit Our Showroom</h2>
-        <div className="contact">
+        <div className="contact" id="contact">
           <div className="contact1">
             <div>
               <div>
@@ -114,7 +126,7 @@ export default function AboutPage() {
                       <p>
                         <strong>Email</strong>
                         <br />
-                        info@modernhome.com
+                        info@stonleaf.com
                       </p>
                     </div>
                   </div>
@@ -136,7 +148,6 @@ export default function AboutPage() {
           </div>
           <div className="contact2">
             <h3>Schedule a Visit</h3>
-            {/* <div className="contact_form"> */}
             <form className="form">
               <div className="form_div">
                 <label htmlFor="name">Name</label>
@@ -163,7 +174,6 @@ export default function AboutPage() {
                 Request Appointment
               </button>
             </form>
-            {/* </div> */}
           </div>
         </div>
       </section>

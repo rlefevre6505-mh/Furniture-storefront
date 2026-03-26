@@ -83,9 +83,29 @@
 .quantity_button {
   margin-right: 0.4rem;
   margin-left: 0.4rem;
+  background-color: var(--brand-color1);
+  border-radius: 4px;
+  height: 1.6rem;
+  width: 1.6rem;
+  border: none;
 }
 
-.cart_total {
-  text-align: center;
-  font-weight: 600;
+.cart_summary {
+  margin: 2.8rem auto 6rem auto;
+  display: flex;
+  flex-direction: column;
+
+  .cart_total {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .proceed_button {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background-color: var(--brand-color1);
+    padding: 0.8rem 1.2rem;
+    border-radius: 4px;
+  }
 }
