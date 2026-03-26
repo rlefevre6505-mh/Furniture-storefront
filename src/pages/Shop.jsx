@@ -78,8 +78,9 @@ export default function ShopPage() {
               setCartHidden(true);
             }}
           >
-            <path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z" />
+            <path d="M440-160q-17 0-28.5-11.5T400-200v-240L163.33-742q-14.33-18-4.16-38 10.16-20 32.83-20h576q22.67 0 32.83 20 10.17 20-4.16 38L560-440v240q0 17-11.5 28.5T520-160h-80Zm40-286.67 226-286.66H254l226 286.66Zm0 0Z" />
           </svg>
+
           {/* 
 {sort === "featured" && (
             <h2>All products - sorted by highest price</h2>
