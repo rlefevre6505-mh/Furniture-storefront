@@ -8,6 +8,7 @@ import ProductDetails from "./pages/Product";
 import AboutPage from "./pages/AboutPage";
 import Checkout from "./pages/Checkout";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import CartProvider from "./context/CartContext";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import PaymentFailure from "./pages/PaymentFailure";
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/cancel" element={<PaymentFailure />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </CartProvider>
   );
