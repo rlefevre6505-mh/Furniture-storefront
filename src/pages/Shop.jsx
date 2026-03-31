@@ -15,7 +15,7 @@ export default function ShopPage() {
     "lighting",
   ]); // category checkboxes selected
   const [values, setValues] = useState([1, 1600]); // min-max values of price range slider
-  const [sort, setSort] = useState("featured"); // sort by price, highest first by default
+  const [sort, setSort] = useState("featured"); // sort by...
   const [filtersHidden, setFiltersHidden] = useState(true);
   const [cartHidden, setCartHidden] = useState(true);
   // const [cartHidden, setCartHidden] = useState(true);
@@ -73,7 +73,7 @@ export default function ShopPage() {
             height="40px"
             viewBox="0 -960 960 960"
             width="40px"
-            fill="#1f1f1f"
+            fill="rgb(50, 123, 141)"
             onClick={() => {
               filtersHidden ? setFiltersHidden(false) : setFiltersHidden(true);
               setCartHidden(true);
@@ -97,7 +97,7 @@ export default function ShopPage() {
             height="40px"
             viewBox="0 -960 960 960"
             width="40px"
-            fill="#1f1f1f"
+            fill="rgb(50, 123, 141)"
             onClick={() => {
               cartHidden ? setCartHidden(false) : setCartHidden(true);
               setFiltersHidden(true);
