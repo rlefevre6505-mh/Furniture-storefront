@@ -84,7 +84,7 @@
 
   .cart_button {
     padding: 0.8rem 1.2rem;
-    background-color: #1f7bdd;
+    background-color: rgb(50, 123, 141, 0.99);
     color: white;
     border: none;
     border-radius: 4px;

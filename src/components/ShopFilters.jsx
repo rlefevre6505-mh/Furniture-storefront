@@ -94,7 +94,7 @@ export default function ShopFilters({
       <div>
         <p className="bold">Set price range:</p>
 
-        <div>
+        <div className="slider_div">
           <Range
             values={values}
             step={STEP}
@@ -167,7 +167,7 @@ export default function ShopFilters({
       </div>
 
       <div>
-        <p className="bold">Sort by price:</p>
+        <p className="bold">Sort:</p>
         <select
           className="select"
           value={sort}

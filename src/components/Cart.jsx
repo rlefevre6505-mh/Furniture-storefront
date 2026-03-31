@@ -1,8 +1,6 @@
-// import { useEffect, useState } from "react";
-// import { Elements } from "@stripe/react-stripe-js";
+import { Link } from "react-router";
 import { useCart } from "../context/CartContext";
 import "./Cart.css";
-// import CheckoutForm from "../components/CheckoutForm";
 
 export default function Cart({ cartHidden, setCartHidden, ref }) {
   const {
@@ -82,6 +80,9 @@ export default function Cart({ cartHidden, setCartHidden, ref }) {
         </div>
         <div className="cart_summary">
           <p className="cart_total">Total: £{total.toFixed(2)}</p>
+          <Link className="proceed_button" to="/checkout">
+            Proceed to Checkout
+          </Link>
         </div>
       </div>
     </div>
