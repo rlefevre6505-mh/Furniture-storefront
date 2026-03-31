@@ -3,9 +3,10 @@ import ItemCard from "../components/ItemCard.jsx";
 import ShopFilters from "../components/ShopFilters.jsx";
 import Cart from "../components/Cart.jsx";
 // import { Link } from "react-router";
-import React from "react";
+// import React from "react";
 import { useState, useEffect, useRef } from "react";
 import "./Shop.css";
+
 export default function ShopPage() {
   const [checkboxes, setCheckboxes] = useState([
     "sofas",
