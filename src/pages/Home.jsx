@@ -1,9 +1,14 @@
 import Slideshow from "../components/Slideshow.jsx";
 import { Link } from "react-router";
+import { useEffect } from "react";
 import "./Home.css";
 import { PhoneIconV1, VanIcon, ShieldIcon } from "../components/icons.jsx";
 
 export default function HomePage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="carousel">

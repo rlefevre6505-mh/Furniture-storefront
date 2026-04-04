@@ -22,6 +22,10 @@ export default function ShopPage() {
   const [showItems, setShowItems] = useState(items);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     if (sort === "lowest") {
       const reverseSortedProducts = items.sort((a, b) => b.price - a.price);
       setShowItems([...reverseSortedProducts]);

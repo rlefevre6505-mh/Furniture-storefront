@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useCart } from "../context/CartContext";
 import "./Checkout.css";
 
@@ -12,6 +12,10 @@ export default function Checkout() {
   } = useCart();
   const cartItems = getCartItemsWithProducts();
   const total = getCartTotal();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleCheckout = async () => {
     setIsLoading(true);

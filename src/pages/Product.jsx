@@ -16,6 +16,10 @@ export default function Product() {
     }
   }, [product, navigate]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { addToCart, cartItems } = useCart();
   const productInCart = cartItems.find((item) => item.id === item.id);
   const productQuantity = productInCart ? `(${productInCart.quantity})` : ``;

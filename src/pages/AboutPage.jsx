@@ -12,6 +12,10 @@ import {
 } from "../components/icons";
 
 export default function AboutPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { hash } = useLocation();
   useEffect(() => {
     if (hash) {
