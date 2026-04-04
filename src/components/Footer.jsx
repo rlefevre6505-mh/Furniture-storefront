@@ -18,28 +18,32 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Customer Service */}
-          <div className="links_div">
-            <h3>Customer Service</h3>
-            <a href="#">Shipping Information</a>
-            <a href="#">Returns & Exchanges</a>
-            <a href="#">Warranty</a>
-            <a href="#">Assembly Services</a>
-          </div>
+          <div className="links_subdiv">
+            {/* Customer Service */}
+            <div className="links_div">
+              <h3>Customer Service</h3>
+              <a href="#">Shipping Information</a>
+              <a href="#">Returns & Exchanges</a>
+              <a href="#">Warranty</a>
+              <a href="#">Assembly Services</a>
+            </div>
 
-          {/* Quick Links */}
-          <div className="links_div">
-            <h3>Quick Links</h3>
-            <Link to="/shop">Shop All</Link>
-            <Link to="/about">About Us</Link>
-            <a href="#">Contact</a>
-            <a href="#">FAQ</a>
+            {/* Quick Links */}
+            <div className="links_div">
+              <h3>Quick Links</h3>
+              <Link to="/shop">Shop All</Link>
+              <Link to="/about">About Us</Link>
+              <a href="#">Contact</a>
+              <a href="#">FAQ</a>
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="social_links">
-          <p>© 2026 Stoneleaf Furnishings. All rights reserved.</p>
+          <p className="social_p">
+            © 2026 Stoneleaf Furnishings. All rights reserved.
+          </p>
           <div className="icons">
             <a className="icon" href="#">
               <FacebookIcon />

@@ -6,15 +6,15 @@ export default function Header() {
   console.log(location.pathname);
 
   return (
-    <header>
+    <header className="header">
       <div className="branding-div">
         <div className="logo">
           <svg
             className="leaf_logo"
             xmlns="http://www.w3.org/2000/svg"
             version="1.0"
-            width="1280.000000pt"
-            height="1169.000000pt"
+            width="40"
+            height="40"
             viewBox="0 0 1280.000000 1169.000000"
             preserveAspectRatio="xMidYMid meet"
           >
@@ -35,14 +35,18 @@ export default function Header() {
       </div>
       <nav className="nav">
         <Link
-          className={location.pathname === "/" ? "link link_active" : "link"}
+          className={
+            location.pathname === "/" ? "nav_link nav_link_active" : "nav_link"
+          }
           to="/"
         >
           Home
         </Link>
         <Link
           className={
-            location.pathname === "/shop" ? "link link_active" : "link"
+            location.pathname === "/shop"
+              ? "nav_link nav_link_active"
+              : "nav_link"
           }
           to="/shop"
         >
@@ -50,7 +54,9 @@ export default function Header() {
         </Link>
         <Link
           className={
-            location.pathname === "/about" ? "link link_active" : "link"
+            location.pathname === "/about"
+              ? "nav_link nav_link_active"
+              : "nav_link"
           }
           to="/about"
         >
@@ -58,7 +64,9 @@ export default function Header() {
         </Link>
         <Link
           className={
-            location.pathname === "/checkout" ? "link link_active" : "link"
+            location.pathname === "/checkout"
+              ? "nav_link nav_link_active"
+              : "nav_link"
           }
           to="/checkout"
         >

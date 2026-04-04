@@ -1,4 +1,4 @@
-header {
+.header {
   z-index: 3;
   display: flex;
   justify-content: space-between;
@@ -50,7 +50,7 @@ h1 {
   gap: 0.4rem;
   margin-right: 4vw;
 
-  .link {
+  .nav_link {
     box-sizing: border-box;
     color: white;
     text-decoration: none;
@@ -59,17 +59,59 @@ h1 {
     border: 2px solid rgba(0, 0, 0, 0);
   }
 
-  .link:hover {
+  .nav_link:hover {
     cursor: pointer;
     border: 2px solid rgba(255, 255, 255, 0.7);
   }
 
-  .link:active {
+  .nav_link:active {
     color: var(--brand-color1);
     background-color: rgba(255, 255, 255, 0.7);
   }
 
-  .link_active {
+  .nav_link_active {
     border: 2px solid rgba(255, 255, 255, 0.9);
+  }
+}
+
+@media (width < 750px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+    height: 25vh;
+    padding: 0;
+  }
+  .branding-div {
+    margin-right: 2em;
+    width: auto;
+  }
+  nav {
+    margin-top: 0;
+    width: auto;
+  }
+}
+
+@media (width < 450px) {
+  h1 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
+  .nav {
+    .nav_link {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.4rem;
+      margin-top: 0.2rem;
+    }
+  }
+  .branding-div {
+    margin-top: 0.2rem;
+  }
+}
+
+@media (width < 350px) {
+  h1 {
+    font-size: 1.2rem;
   }
 }

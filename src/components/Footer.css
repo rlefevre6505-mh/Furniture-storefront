@@ -13,9 +13,12 @@
 }
 
 .brand_div {
-  margin-top: 0.8rem;
   font-size: 1.2rem;
   width: 35vw;
+
+  h3 {
+    font-size: 1.2rem;
+  }
 }
 
 .h3 {
@@ -70,6 +73,13 @@ a {
   margin: 0 5% 0.4rem 5%;
 }
 
+.links_subdiv {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
 .icons {
   display: flex;
   justify-content: space-between;
@@ -83,4 +93,49 @@ a {
 
 .icon:hover {
   transform: scale(1.2);
+}
+
+@media (width < 1000px) {
+  .p {
+    font-size: 0.8rem;
+  }
+  .social_p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (width < 800px) {
+  .footer {
+    height: 40vh;
+  }
+  .links_subdiv {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+  }
+}
+
+@media (width < 650px) {
+  .footer {
+    height: 75vh;
+  }
+  .links_subdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (width < 550px) {
+  .footer {
+    height: 80vh;
+  }
+  .links_subdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
 }
