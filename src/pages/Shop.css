@@ -164,7 +164,7 @@
 
 @media (width < 750px) {
   .icon_container {
-    margin-top: 23vh;
+    margin-top: 17vh;
     padding-bottom: 0;
     h2 {
       font-size: 1rem;
@@ -174,8 +174,8 @@
   }
   .menu_icon,
   .cart_icon {
-    height: 25px;
-    width: 20px;
+    height: 30px;
+    width: 25px;
   }
   .product-container {
     margin-top: 33vh;

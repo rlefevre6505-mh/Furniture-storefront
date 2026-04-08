@@ -112,7 +112,7 @@ export default function ShopFilters({
                   ...props.style,
                   height: "66px",
                   display: "flex",
-                  width: "50%",
+                  width: "80%",
                 }}
               >
                 <div

@@ -102,3 +102,55 @@
   right: -50px;
   background-color: rgb(242, 213, 81);
 }
+
+@media (width < 1400px) {
+  .slideshow {
+    height: 70vh;
+  }
+}
+
+@media (width < 1100px) {
+  .slideshow {
+    height: 60vh;
+  }
+}
+
+@media (width < 900px) {
+  .p0,
+  .p1,
+  .p2 {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    font-size: 1.2rem;
+  }
+  .slideshow {
+    height: 45vh;
+  }
+}
+
+@media (width < 700px) {
+  .slideshow {
+    height: 35vh;
+  }
+  .p0,
+  .p1,
+  .p2 {
+    position: absolute;
+    bottom: -65px;
+    right: -50px;
+  }
+}
+
+@media (width < 550px) {
+  .slideshow {
+    height: 35vh;
+  }
+  .p0,
+  .p1,
+  .p2 {
+    position: absolute;
+    bottom: -65px;
+    right: -50px;
+  }
+}

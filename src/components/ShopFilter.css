@@ -67,3 +67,21 @@
   color: var(--brand-color1);
   margin-top: 3.6rem;
 }
+
+@media (width < 1000px) {
+  .filter_panel_show {
+    width: 40vw;
+  }
+}
+
+@media (width < 700px) {
+  .filter_panel_show {
+    width: 50vw;
+  }
+}
+
+@media (width < 550px) {
+  .filter_panel_show {
+    width: 70vw;
+  }
+}
