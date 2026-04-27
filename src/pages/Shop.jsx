@@ -15,7 +15,7 @@ export default function ShopPage() {
     "lighting",
   ]); // category checkboxes selected
   const [values, setValues] = useState([1, 1600]); // min-max values of price range slider
-  const [sort, setSort] = useState("featured"); // sort by...
+  const [sort, setSort] = useState("lowest"); // sort by...
   const [filtersHidden, setFiltersHidden] = useState(true);
   const [cartHidden, setCartHidden] = useState(true);
   // const [cartHidden, setCartHidden] = useState(true);
@@ -27,18 +27,20 @@ export default function ShopPage() {
 
   useEffect(() => {
     if (sort === "lowest") {
-      const reverseSortedProducts = items.sort((a, b) => b.price - a.price);
-      setShowItems([...reverseSortedProducts]);
+      const reverseSortedProducts = [...items].sort(
+        (a, b) => b.price - a.price,
+      );
+      setShowItems(reverseSortedProducts);
     }
     if (sort === "highest") {
-      const sortedProducts = items.sort((a, b) => a.price - b.price);
-      setShowItems([...sortedProducts]);
+      const sortedProducts = [...items].sort((a, b) => a.price - b.price);
+      setShowItems(sortedProducts);
     }
-    if (sort === "featured") {
-      const sortedProducts = items.filter((item) => item.featured === true);
-      setShowItems([...sortedProducts]);
-    }
-  }, [sort]);
+    // if (sort === "featured") {
+    //   const sortedProducts = items.filter((item) => item.featured === true);
+    //   setShowItems(sortedProducts);
+    // }
+  }, [sort, items]);
 
   const excludedRef1 = useRef(null);
   const excludedRef2 = useRef(null);
@@ -87,10 +89,10 @@ export default function ShopPage() {
           </svg>
 
           {/* 
-{sort === "featured" && (
+            {sort === "featured" && (
             <h2>All products - sorted by highest price</h2>
           )} */}
-          {sort === "featured" && <h2>Featured Products</h2>}
+          {/* {sort === "featured" && <h2>Featured Products</h2>} */}
           {sort === "highest" && <h2>Products sorted by lowest price</h2>}
           {sort === "lowest" && <h2>Products sorted by highest price</h2>}
 

@@ -175,7 +175,7 @@ export default function ShopFilters({
             setSort(e.target.value);
           }}
         >
-          <option value="featured">Featured products</option>
+          {/* <option value="featured">Featured products</option> */}
           <option value="lowest">Highest first</option>
           <option value="highest">Lowest first</option>
         </select>
