@@ -4,7 +4,7 @@ import ShopFilters from "../components/ShopFilters.jsx";
 import Cart from "../components/Cart.jsx";
 // import { Link } from "react-router";
 // import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import "./Shop.css";
 
 export default function ShopPage() {
@@ -18,7 +18,7 @@ export default function ShopPage() {
   const [sort, setSort] = useState("lowest"); // sort by...
   const [filtersHidden, setFiltersHidden] = useState(true);
   const [cartHidden, setCartHidden] = useState(true);
-  const [showItems, setShowItems] = useState(items);
+  // const [showItems, setShowItems] = useState(items);
 
   // useEffect(() => {
   //   if (sort === "lowest") {
