@@ -18,29 +18,34 @@ export default function ShopPage() {
   const [sort, setSort] = useState("lowest"); // sort by...
   const [filtersHidden, setFiltersHidden] = useState(true);
   const [cartHidden, setCartHidden] = useState(true);
-  // const [cartHidden, setCartHidden] = useState(true);
   const [showItems, setShowItems] = useState(items);
+
+  // useEffect(() => {
+  //   if (sort === "lowest") {
+  //     const reverseSortedProducts = [...items].sort(
+  //       (a, b) => b.price - a.price,
+  //     );
+  //     setShowItems(reverseSortedProducts);
+  //   }
+  //   if (sort === "highest") {
+  //     const sortedProducts = [...items].sort((a, b) => a.price - b.price);
+  //     setShowItems(sortedProducts);
+  //   }
+  //   // if (sort === "featured") {
+  //   //   const sortedProducts = items.filter((item) => item.featured === true);
+  //   //   setShowItems(sortedProducts);
+  //   // }
+  // }, [sort]);
+
+  const sortedItems = useMemo(() => {
+    if (sort === "lowest") return [...items].sort((a, b) => b.price - a.price);
+    if (sort === "highest") return [...items].sort((a, b) => a.price - b.price);
+    return items;
+  }, [sort]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  useEffect(() => {
-    if (sort === "lowest") {
-      const reverseSortedProducts = [...items].sort(
-        (a, b) => b.price - a.price,
-      );
-      setShowItems(reverseSortedProducts);
-    }
-    if (sort === "highest") {
-      const sortedProducts = [...items].sort((a, b) => a.price - b.price);
-      setShowItems(sortedProducts);
-    }
-    // if (sort === "featured") {
-    //   const sortedProducts = items.filter((item) => item.featured === true);
-    //   setShowItems(sortedProducts);
-    // }
-  }, [sort, items]);
 
   const excludedRef1 = useRef(null);
   const excludedRef2 = useRef(null);
@@ -49,7 +54,7 @@ export default function ShopPage() {
 
   useEffect(() => {
     function handleClick(e) {
-      // If click is inside excluded areas, do nothing
+      // If click is inside excluded areas do nothing, otherwise close filters/cart
       if (
         excludedRef1.current?.contains(e.target) ||
         excludedRef2.current?.contains(e.target) ||
@@ -132,7 +137,7 @@ export default function ShopPage() {
           {!checkboxes[0] ? (
             <h2 className="no-products">No products match your search</h2>
           ) : (
-            showItems.map((item, i) => {
+            sortedItems.map((item, i) => {
               if (
                 item.price >= values[0] &&
                 item.price <= values[1] &&
