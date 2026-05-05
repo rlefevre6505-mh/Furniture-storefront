@@ -21,7 +21,7 @@ export default function Product() {
   }, []);
 
   const { addToCart, cartItems } = useCart();
-  const productInCart = cartItems.find((item) => item.id === item.id);
+  const productInCart = cartItems.find((item) => item.id === product.id);
   const productQuantity = productInCart ? `(${productInCart.quantity})` : ``;
 
   console.log(product.colours);
